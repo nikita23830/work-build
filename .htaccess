@@ -4,6 +4,8 @@ DirectorySlash Off
 RewriteEngine On  
   
 RewriteCond %{SCRIPT_FILENAME} !-d  
-RewriteCond %{SCRIPT_FILENAME} !-f  
+RewriteCond %{SCRIPT_FILENAME} !-f 
 
 RewriteRule ^(.*)$ ./index.html
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
