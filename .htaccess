@@ -1,6 +1,5 @@
 # GLOBAL CONFIG
 Options +FollowSymlinks
-DirectorySlash Off
 RewriteEngine On  
   
 RewriteCond %{SCRIPT_FILENAME} !-d  
