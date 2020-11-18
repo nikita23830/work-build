@@ -1,6 +1,9 @@
-RewriteEngine On  
-  
-RewriteCond %{SCRIPT_FILENAME} !-d  
-RewriteCond %{SCRIPT_FILENAME} !-f  
+<IfModule mod_rewrite.c>
 
-RewriteRule ^(.*)$ ./index.html
+   RewriteEngine On
+
+   RewriteCond %{REQUEST_FILENAME}  -f [OR]
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^(.*)$ index.php [L,QSA]
+
+</IfModule>
