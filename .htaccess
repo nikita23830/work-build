@@ -1,8 +1,6 @@
-# GLOBAL CONFIG
-Options +FollowSymlinks
 RewriteEngine On  
   
 RewriteCond %{SCRIPT_FILENAME} !-d  
-RewriteCond %{SCRIPT_FILENAME} !-f 
+RewriteCond %{SCRIPT_FILENAME} !-f  
 
 RewriteRule ^(.*)$ ./index.html
